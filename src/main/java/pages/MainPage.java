@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 import static com.codeborne.selenide.Selenide.$;
 
 public class MainPage {
-    protected static final String ELEMENTS_BUTTON_XPATH ="//h5[contains(text(),'Elements')]";
+    protected static final String ELEMENTS_BUTTON_XPATH ="//div[@class='card-body'] / h5[contains (text(), 'Elements')]";
     protected static final String FORMS_BUTTON_XPATH ="//h5[contains(text(),'Forms')]";
     protected static final String ALERTS_FRAME_AND_WINDOWS_XPATH = "//h5[contains(text(),'Alerts, Frame & Windows')]";
     protected static final String WIDGETS_XPATH = "//h5[contains(text(),'Widgets')]";
