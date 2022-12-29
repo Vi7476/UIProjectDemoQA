@@ -34,14 +34,16 @@ public class BaseSteps {
     public void waitTillElementIsEnabled(SelenideElement element){$(element).should(Condition.enabled, Duration.ofSeconds(6));}
     public void scrollTillElementIsVisible(SelenideElement element){$(element).scrollIntoView(true);}
 
+
     public void pageElementAccertContains(SelenideElement element, String expectedText){
         Assert.assertTrue(element.getText().contains(expectedText), "result does not contain expected Text");
     }
     public void checkCurrentURL(String expectedURL){
         Assert.assertEquals(WebDriverRunner.getWebDriver().getCurrentUrl(), expectedURL);
     }
-    public void closeIframeAdvertisement(SelenideElement element){
-        switchTo().frame(element).close();
-    }
+//    public void closeIframeAdvertisement(String frameId){
+//        switchTo().frame(frameId, Duration.ofSeconds(10)).close();
+//        switchTo().defaultContent();
+//    }
 
 }

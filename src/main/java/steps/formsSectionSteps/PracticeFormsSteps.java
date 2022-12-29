@@ -101,8 +101,7 @@ public class PracticeFormsSteps extends BaseSteps {
         String fileName = "test.png";
         File uploadFile = practiceFormsPage.pictureUploadButton().uploadFile(new File(filePath));
     }
-    public void closeAds(){closeIframeAdvertisement(practiceFormsPage.advertisement());
-    }
+
 
     @SneakyThrows
     public void zoomOutWithRobotClass(){
