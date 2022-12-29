@@ -2,6 +2,7 @@ package steps;
 
 import com.codeborne.selenide.*;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import utils.Config;
@@ -17,7 +18,7 @@ public class BaseSteps {
     public void openBaseUrl() {
         Selenide.open(Config.getBaseURL());
         //WebDriverRunner.getWebDriver().manage().window().maximize();
-        WebDriverRunner.getWebDriver().manage().window().fullscreen();
+        WebDriverRunner.getWebDriver().manage().window().setSize(new Dimension(1920,1080));
     }
 
     public void clickOnElement(SelenideElement element) {
