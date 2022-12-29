@@ -6,6 +6,7 @@ public class ElementsTextBoxTest extends BaseTest {
     @BeforeMethod
     public void openElementsPage(){
         baseSteps.openBaseUrl();
+        mainPageSteps.scrollTillElementIsVisible(mainPage.elementsButton());
         mainPageSteps.clickOnElement(mainPage.elementsButton());
         mainPageSteps.clickOnElement(elementsPage.textBoxSection());
         mainPageSteps.elementsTEXTBOXPageTitleAssertion();
