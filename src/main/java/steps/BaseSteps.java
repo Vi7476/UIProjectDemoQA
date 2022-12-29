@@ -16,7 +16,8 @@ public class BaseSteps {
 
     public void openBaseUrl() {
         Selenide.open(Config.getBaseURL());
-        WebDriverRunner.getWebDriver().manage().window().maximize();
+        //WebDriverRunner.getWebDriver().manage().window().maximize();
+        WebDriverRunner.getWebDriver().manage().window().fullscreen();
     }
 
     public void clickOnElement(SelenideElement element) {
