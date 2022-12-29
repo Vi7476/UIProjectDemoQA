@@ -29,6 +29,7 @@ public class TextBoxSteps extends BaseSteps {
         textBoxPage.currentAddressTextareaField().sendKeys(userCurrentAddress);
         textBoxPage.permanentAddressTextareaField().clear();
         textBoxPage.permanentAddressTextareaField().sendKeys(userPermanentAddress);
+        scrollTillElementIsVisible(textBoxPage.submitButton());
         textBoxPage.submitButton().click();
 
     }
