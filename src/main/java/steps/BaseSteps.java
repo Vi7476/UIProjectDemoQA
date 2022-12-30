@@ -1,9 +1,6 @@
 package steps;
 
 import com.codeborne.selenide.*;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
-import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import utils.Config;
 
@@ -16,9 +13,11 @@ import static com.codeborne.selenide.Selenide.*;
 public class BaseSteps {
 
     public void openBaseUrl() {
+        Configuration.headless = false;
         Selenide.open(Config.getBaseURL());
         WebDriverRunner.getWebDriver().manage().window().fullscreen();
         //WebDriverRunner.getWebDriver().manage().window().setSize(new Dimension(1920,1080));
+        
     }
 
     public void clickOnElement(SelenideElement element) {
@@ -59,11 +58,7 @@ public class BaseSteps {
         switchTo().defaultContent();
     }
     public void setAdsHidden(){
-       // SelenideElement ads = $(By.xpath("//iframe[@title='3rd party ad content']"));
 
-        //JavascriptExecutor js = (JavascriptExecutor) Selenide.webdriver();
-        //SelenideElement ads = $(By.xpath("//div[@id ='fixedban']"));
-        //js.executeScript("return document.getElementById('fixedban').remove();");
         Selenide.executeJavaScript("return document.getElementById('fixedban').remove();");
     }
 }
