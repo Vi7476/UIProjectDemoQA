@@ -2,8 +2,11 @@
 import jdk.jfr.Description;
 import lombok.SneakyThrows;
 
+import org.slf4j.Logger;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
+import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
 
 public class ElementsTextBoxTest extends BaseTest {
@@ -21,6 +24,7 @@ public class ElementsTextBoxTest extends BaseTest {
     @Description("filling text box form and click SUBMIT button. assert submitted form")
     public void TextBoxForFilling(){
         textBoxSteps.fillTExtBoxFormAndClickSubmit();
+        System.out.println(getWebDriver().getWindowHandle()+"====$$$$$$");
         textBoxSteps.submittedBoxFieldsAssertions();
     }
 }
